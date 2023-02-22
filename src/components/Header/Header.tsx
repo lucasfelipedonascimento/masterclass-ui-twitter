@@ -1,5 +1,5 @@
 import { Sparkle } from "phosphor-react";
-import './Sidebar.css';
+import './Header.css';
 
 interface HeaderProps {
   title: string;
