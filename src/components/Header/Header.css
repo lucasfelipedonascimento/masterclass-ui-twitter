@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 1.25rem;
-  font-weigth: 700;
+  font: 700 1.25rem Roboto, sans-serif;
   border-bottom: 1px solid #ebeef0;
 }
 

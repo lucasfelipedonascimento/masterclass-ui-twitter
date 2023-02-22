@@ -12,7 +12,7 @@ export function Tweet(props: TweetProps) {
       <img src="https://github.com/lucasfelipedonascimento.png" alt="Lucas Felipe" />
 
       <div className="tweet-content">
-        <div className="tweet-contnt-header">
+        <div className="tweet-content-header">
           <strong>Lucas Felipe</strong>
           <span>@lufasfel</span>
         </div>

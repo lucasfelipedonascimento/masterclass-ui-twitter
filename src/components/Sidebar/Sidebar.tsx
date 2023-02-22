@@ -1,7 +1,7 @@
 import TwitterLogo from '../../assets/logo-twitter.svg';
-import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react';
+import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Pencil, User } from 'phosphor-react';
 import './Sidebar.css';
-import { Link } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 // contexto: no react existem locais onde eu tenho acesso a algumas informações, e locais aonde 
 // eu não consigo ter acesso a essas mesmas informnações
@@ -12,50 +12,53 @@ export function Sidebar() {
           <img className='logo' src={TwitterLogo} alt="Logo" />
 
           <nav className='main-navigaton'>
-            <Link className='active' to="/">
+            <NavLink className='active' to="/">
               <House weight='fill'  />
-              Home
-            </Link>
+              <span>Home</span>
+            </NavLink>
 
 
             <Link to="">
               <Hash />
-              Explore
+              <span>Explore</span>
             </Link>
 
             <Link to="">
               <Bell />
-              Notifications
+              <span>Notifications</span>
             </Link>
 
             <Link to="">
               <Envelope />
-              Messages
+              <span>Messages</span>
             </Link>
 
             <Link to="">
               <BookmarkSimple />
-              Bookmarks
+              <span>Bookmarks</span>
             </Link>
 
             <Link to="">
               <FileText />
-              Lists
+              <span>Lists</span>
             </Link>
 
             <Link to="">
               <User />
-              Profile
+              <span>Profile</span>
             </Link>
 
             <Link to="">
               <DotsThreeCircle />
-              More
+              <span>More</span>
             </Link>
 
           </nav>
 
-          <button className='new-tweet'>Tweet</button>
+          <button className='new-tweet'>
+            <Pencil />
+            <span className='title-button'>Tweet</span>
+          </button>
       </aside>
   )
 }
