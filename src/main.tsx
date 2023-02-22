@@ -1,9 +1,9 @@
-import React, { Profiler } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { Tweet } from './components/Tweet';
 import './global.css';
-import { Sidebar } from './components/Sidebar';
-import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar/Sidebar';
+import { router } from './Routes';
+import { RouterProvider } from 'react-router-dom';
 
 // renderizar => mostrar em tela
 
@@ -15,29 +15,16 @@ import { Header } from './components/Header';
 // Typescript: Ferramenta de tipagem estática para JavaScript
 // Tipagem estática: Mecanismo para evitar erros ENQUANTO estamos desenvolvendo o nosso app
 
+// forEach: não tem retorno
+// map: sempre retorna um valor
+// key: chave "unique", que deve ser passada para o react saber exatamente qual elemento da lista 
+// que estou interando ou "mexendo"
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <div className='layout'>
-      <Sidebar />
-      
-      <div className="content">
-        <main className='timeline'>
-          <Header title='Home' />
-
-          <form className="new-tweet-form">
-            <label htmlFor="tweet">
-              <img src="https://github.com/lucasfelipedonascimento.png" alt="Lucas Felipe" />
-              <textarea id='tweet' placeholder="What's happening?" />
-            </label>
-
-            <button type='submit'>Tweet</button>
-          </form>
-
-          <div className="separator" />
-
-          <Tweet />
-        </main>
-      </div>
-    </div>
+    {/* Quanto usamos o "RouterProvider", quer dizer que estou dando acesso a  
+        todas as funcionalidades do React Router Dom para todos os elementos que estiverem
+        dentro do meu "RouterProvider" */}
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -1,6 +1,10 @@
-import TwitterLogo from '../assets/logo-twitter.svg';
+import TwitterLogo from '../../assets/logo-twitter.svg';
 import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react';
 import './Sidebar.css';
+import { Link } from 'react-router-dom'
+
+// contexto: no react existem locais onde eu tenho acesso a algumas informações, e locais aonde 
+// eu não consigo ter acesso a essas mesmas informnações
 
 export function Sidebar() {
   return (
@@ -8,46 +12,46 @@ export function Sidebar() {
           <img className='logo' src={TwitterLogo} alt="Logo" />
 
           <nav className='main-navigaton'>
-            <a className='active' href="">
+            <Link className='active' to="/">
               <House weight='fill'  />
               Home
-            </a>
+            </Link>
 
 
-            <a href="">
+            <Link to="">
               <Hash />
               Explore
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <Bell />
               Notifications
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <Envelope />
               Messages
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <BookmarkSimple />
               Bookmarks
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <FileText />
               Lists
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <User />
               Profile
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <DotsThreeCircle />
               More
-            </a>
+            </Link>
 
           </nav>
 
